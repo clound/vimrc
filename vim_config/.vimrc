@@ -21,7 +21,7 @@ au FileType html setlocal dict+=~/.vim/dict/css.dict
 
 "
 "syntastic相关
-execute pathogen#infect()
+
 let g:syntastic_python_checkers=['pylint']
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 "golang
@@ -133,8 +133,8 @@ func SetTitle()
 	else 
 		call setline(1, "/*************************************************************************") 
 		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: ") 
-		call append(line(".")+2, "	> Mail: ") 
+		call append(line(".")+1, "	> Author: clound") 
+		call append(line(".")+2, "	> Mail:clound602@gmail.com ") 
 		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
 		call append(line(".")+4, " ************************************************************************/") 
 		call append(line(".")+5, "")
@@ -409,49 +409,20 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'Yggdroot/indentLine'
+
 let g:indentLine_char = '┊'
 "ndle 'tpope/vim-rails.git'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" non github repos
-Bundle 'git://github.com/wincent/command-t.git'
-Bundle 'Auto-Pairs'
-Bundle 'python-imports.vim'
-Bundle 'CaptureClipboard'
-Bundle 'ctrlp-modified.vim'
-Bundle 'last_edit_marker.vim'
-Bundle 'synmark.vim'
-"Bundle 'Python-mode-klen'
-Bundle 'SQLComplete.vim'
-Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
-"Bundle 'JavaScript-Indent'
-"Bundle 'Better-Javascript-Indentation'
-Bundle 'jslint.vim'
-Bundle "pangloss/vim-javascript"
-Bundle 'Vim-Script-Updater'
-Bundle 'ctrlp.vim'
-Bundle 'tacahiroy/ctrlp-funky'
-Bundle 'jsbeautify'
-Bundle 'The-NERD-Commenter'
-"django
-Bundle 'django_templates.vim'
-Bundle 'Django-Projects'
 
-"Bundle 'FredKSchott/CoVim'
-"Bundle 'djangojump'
 " ...
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
